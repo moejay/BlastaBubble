@@ -1,9 +1,11 @@
 package com.jcc.blastabubble;
 
 import com.jcc.framework2d.Game;
+import com.jcc.framework2d.gl.Camera2D;
 import com.jcc.framework2d.impl.GLScreen;
 
 public class MainMenuScreen extends GLScreen {
+	Camera2D guiCam;
 
 	public MainMenuScreen(Game game) {
 		super(game);
