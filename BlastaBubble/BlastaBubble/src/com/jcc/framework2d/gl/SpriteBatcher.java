@@ -41,7 +41,9 @@ public class SpriteBatcher {
 		bufferIndex = 0;
 	}
 
-	public void endBatch() {
+	public void endBatch() throws RuntimeException {
+		if (bufferIndex == 0)
+			throw new RuntimeException("SpriteBatcher empty");
 		vertices.setVertices(verticesBuffer, 0, bufferIndex);
 		vertices.bind();
 		vertices.draw(GL10.GL_TRIANGLES, 0, numSprites * 6);
