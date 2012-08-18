@@ -70,7 +70,7 @@ public class MainMenuScreen extends GLScreen {
 				guiCam.touchToWorld(touchPoint);
 				if (OverlapTester.pointInRectangle(playBounds, touchPoint)) {
 					Assets.playSound(Assets.clickSound);
-					// game.setScreen(new GameScreen(game));
+					game.setScreen(new GameScreen(game));
 					Log.d("MainMenuScreen", "Play touched");
 					return;
 				}
